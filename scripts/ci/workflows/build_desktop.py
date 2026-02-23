@@ -265,6 +265,10 @@ set -euo pipefail
 cd upload_staging
 [[ "${PLATFORM}" == "macos" && -f latest-mac.yml && ! -f latest-mac-arm64.yml ]] && mv latest-mac.yml latest-mac-arm64.yml || true
 """,
+    "disable_node_mac_permissions_linux_arm64": """
+DIST="${WORKDIR}/fluxer_desktop
+cp -f "$DIST"/pnpm-lock.linux.arm64.yaml "$DIST"/pnpm-lock.yaml  2>/dev/null || true
+""",
     "generate_checksums_unix": """
 set -euo pipefail
 cd upload_staging
