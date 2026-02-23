@@ -257,6 +257,7 @@ jobs:
           APPLE_ID: ${{ secrets.APPLE_ID }}
           APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          ELECTRON_ARCH: ${{ matrix.arch }}
         run: >-
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step build_app_macos
@@ -279,6 +280,7 @@ jobs:
           TMP: C:\t
           SQUIRREL_TEMP: C:\sq
           ELECTRON_BUILDER_CACHE: C:\ebcache
+          ELECTRON_ARCH: ${{ matrix.arch }}
         run: >-
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step build_app_windows
@@ -301,6 +303,7 @@ jobs:
           BUILD_CHANNEL: ${{ env.BUILD_CHANNEL }}
           USE_SYSTEM_FPM: true
           npm_package_config_node_gyp_arch: ${{ case(matrix.arch == 'arm64', 'arm64', '') }}
+          ELECTRON_ARCH: ${{ matrix.arch }}
         run: >-
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step build_app_linux
