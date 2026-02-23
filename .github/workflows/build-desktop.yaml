@@ -310,8 +310,8 @@ jobs:
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step prepare_artifacts_unix
 
-      - name: Normalize updater YAML (arm64)
-        if: matrix.arch == 'arm64'
+      - name: Normalize updater YAML (macos arm64)
+        if: matrix.arch == 'arm64' && matrix.platform == 'macos'
         run: >-
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step normalise_updater_yaml
