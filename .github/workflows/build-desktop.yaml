@@ -202,12 +202,6 @@ jobs:
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step install_setuptools_macos
 
-      - name: Disable node-mac-permissions (linux-arm64)
-        if: matrix.platform == 'linux' && matrix.arch == 'arm64'
-        run: >-
-          python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
-          --step disable_node_mac_permissions_linux_arm64
-
       - name: Install Linux dependencies
         if: matrix.platform == 'linux'
         env:
