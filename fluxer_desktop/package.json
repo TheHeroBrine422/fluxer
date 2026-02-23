@@ -4,6 +4,8 @@
 	"author": "Fluxer Contributors",
 	"email": " developers@fluxer.app",
 	"description": "Fluxer is a free and open source instant messaging and VoIP platform built for friends, groups, and communities.",
+	"homepage": "https://fluxer.app",
+	"url": "https://fluxer.app",
 	"private": true,
 	"type": "module",
 	"main": "dist/main/index.js",
