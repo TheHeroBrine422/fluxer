@@ -144,13 +144,7 @@ module.exports = {
 				target: 'tar.gz',
 				arch: ['x64', 'arm64'],
 			},
-		],
-		desktop: {
-			Name: productName,
-			Comment: 'Instant messaging and VoIP application',
-			Categories: 'Network;InstantMessaging;',
-			StartupWMClass: isCanary ? 'fluxer-canary' : 'fluxer',
-		},
+		]
 	},
 
 	deb: {
