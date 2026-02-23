@@ -71,9 +71,9 @@ def run_step(steps: Mapping[str, Step], step: str) -> None:
     if selected is None:
         main_error(f"Unknown step: {step}")
     if isinstance(selected, str):
-		    if sys.platform == 'win32':
-				    run_pwsh(selected)
-		    else:
+        if sys.platform == 'win32':
+            run_pwsh(selected)
+        else:
             run_bash(selected)
         return
     selected()
