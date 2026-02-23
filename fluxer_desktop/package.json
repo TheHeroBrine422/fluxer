@@ -1,11 +1,14 @@
 {
 	"name": "fluxer_desktop",
 	"version": "0.1.0",
-	"author": "Fluxer Contributors",
-	"email": " developers@fluxer.app",
+	"author": {
+		"name": "Fluxer Contributors",
+		"email": "developers@fluxer.app"
+	},
 	"description": "Fluxer is a free and open source instant messaging and VoIP platform built for friends, groups, and communities.",
 	"homepage": "https://fluxer.app",
 	"url": "https://fluxer.app",
+	"license": "AGPL-3.0-only",
 	"private": true,
 	"type": "module",
 	"main": "dist/main/index.js",
